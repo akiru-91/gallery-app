@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Image Gallery - Upload and Explore{% endblock %}
+
+{% block content %}
+<section class="gallery-section">
+    <!-- Add Photo Form -->
+    <div class="add-photo">
+        <h3>Add a New Photo</h3>
+        <form method="POST" action="{{ url_for('upload_image') }}" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <textarea name="description" placeholder="Enter a description..."></textarea> <!-- No 'required' here -->
+            <button type="submit" class="upload-button">Upload</button>
+        </form>
+    </div>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+                <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Gallery -->
+    <div class="gallery">
+        {% for image in images %}
+        <div class="image-card">
+            <img src="{{ url_for('static', filename='uploads/' + image.filename) }}" alt="{{ image.filename }}">
+            <div class="card-content">
+                <div class="card-description">{{ image.description or "No description" }}</div>
+            </div>
+            <div class="card-buttons">
+                <!-- Delete Form -->
+                <form method="POST" action="{{ url_for('delete_image', image_id=loop.index0) }}">
+                    <button type="submit" class="delete-button">Delete</button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,134 @@
+/* Set the background for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;  /* Set text color to white for contrast */
+}
+/* Logo Styles */
+.logo img {
+    width: 150px;    /* Set the width of the logo */
+    height: auto;    /* Keep the aspect ratio */
+}
+
+
+/* Header styles */
+header {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Darker header background */
+}
+
+/* Gallery section styles */
+.gallery-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.add-photo, .gallery {
+    margin-top: 20px;
+}
+
+/* Add more custom styles for buttons and other elements as needed */
+
+
+header .logo {
+    width: 150px;
+}
+
+h2 {
+    color: #fff; /* Light color for text on dark background */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.flash-messages {
+    margin-top: 10px;
+}
+
+.flash {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.flash.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.flash.error {
+    background-color: #f44336;
+    color: white;
+}
+
+.gallery-section {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background to stand out from the background */
+    border-radius: 10px;
+}
+
+.add-photo {
+    margin-bottom: 20px;
+}
+
+input[type="file"], textarea {
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.image-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-content {
+    margin-top: 10px;
+}
+
+.card-buttons {
+    margin-top: 10px;
+}
+
+.delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background-color: #e53935;
+}
