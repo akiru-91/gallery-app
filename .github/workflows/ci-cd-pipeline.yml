@@ -1,4 +1,4 @@
-name: CI/CD Pipeline with Artifactory/Nexus and IBM Cloud
+name: CI/CD Pipeline to Automate Deployments
 
 on:
   push:
