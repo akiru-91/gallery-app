@@ -3,7 +3,7 @@ name: CI/CD Pipeline with Artifactory/Nexus and IBM Cloud
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   infrastructure:
